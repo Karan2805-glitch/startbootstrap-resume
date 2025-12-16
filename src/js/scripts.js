@@ -1,6 +1,6 @@
 //
 // Scripts
-// 
+//
 
 window.addEventListener('DOMContentLoaded', event => {
 
@@ -11,7 +11,7 @@ window.addEventListener('DOMContentLoaded', event => {
             target: '#sideNav',
             rootMargin: '0px 0px -40%',
         });
-    };
+    }
 
     // Collapse responsive navbar when toggler is visible
     const navbarToggler = document.body.querySelector('.navbar-toggler');
@@ -25,5 +25,28 @@ window.addEventListener('DOMContentLoaded', event => {
             }
         });
     });
+
+    /* ---------------- UI Enhancements ---------------- */
+
+    // Back to top button
+    const backToTopBtn = document.getElementById("backToTop");
+    if (backToTopBtn) {
+        window.addEventListener("scroll", () => {
+            backToTopBtn.style.display =
+                document.documentElement.scrollTop > 300 ? "block" : "none";
+        });
+
+        backToTopBtn.addEventListener("click", () => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+    }
+
+    // Dark mode toggle
+    const darkToggle = document.getElementById("darkToggle");
+    if (darkToggle) {
+        darkToggle.addEventListener("click", () => {
+            document.body.classList.toggle("dark-mode");
+        });
+    }
 
 });

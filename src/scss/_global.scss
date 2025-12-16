@@ -38,3 +38,29 @@ p.lead {
     font-weight: 500;
     font-size: 1.5rem;
 }
+/* Back to top button */
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: none;
+  background: $primary;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 10px 14px;
+  font-size: 18px;
+  cursor: pointer;
+  z-index: 999;
+}
+
+/* Dark mode */
+.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.dark-mode a {
+  color: #90caf9;
+}
+
